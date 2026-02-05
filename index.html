@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ScriptWorks HQ — Premium Workspace</title>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* STARFIELD */
+canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+.page {
+    position: relative;
+    z-index: 2;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+    width: 100%;
+    padding: 22px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: transparent;
+}
+
+/* BRAND WITH ICON */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.brand img {
+    width: 38px;
+    height: 38px;
+    margin-left: -8px;
+}
+
+/* NAV LINKS */
+.nav-links a {
+    margin-left: 40px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    opacity: 0.85;
+    transition: 0.25s;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+    padding: 220px 60px 160px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 68px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 16px 42px;
+    font-size: 20px;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 18px rgba(255,255,255,0.4);
+    transform: translateY(-2px);
+}
+
+/* ---------------- SECTIONS ---------------- */
+.trust, .features, .testimonials {
+    max-width: 1100px;
+    margin: 140px auto;
+    padding: 20px 60px;
+    text-align: center;
+}
+
+.trust h2, .features h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+.trust-grid, .feature-grid {
+    display: grid;
+    gap: 40px;
+}
+
+.trust-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.trust-box, .feature, .testimonial-box {
+    background: rgba(255,255,255,0.04);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    margin-top: 160px;
+    padding: 60px;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+}
+
+footer p {
+    opacity: 0.6;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="stars"></canvas>
+
+<div class="page">
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="brand">
+        <img src="Rocket.png" alt="Rocket Icon">
+        ScriptWorks HQ
+    </div>
+    <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#trust">Why Us</a>
+        <a href="#join">Join</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>The Premium Workspace for Developers & Creators</h1>
+    <p>Tools, systems, and a refined environment built for people who take their craft seriously.</p>
+    <a class="btn" id="join" href="https://discord.gg/ZMA7C67G">Join the HQ</a>
+</section>
+
+<!-- TRUST -->
+<section class="trust" id="trust">
+    <h2>Why Creators Trust ScriptWorks HQ</h2>
+    <div class="trust-grid">
+        <div class="trust-box">
+            <h3>Custom Development</h3>
+            <p>Tailored scripts, systems, and tools built for your project.</p>
+        </div>
+        <div class="trust-box">
+            <h3>Professional Structure</h3>
+            <p>Clean workflows designed with clarity and purpose.</p>
+        </div>
+        <div class="trust-box">
+            <h3>Real Support</h3>
+            <p>Collaborate with serious developers and creators.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+    <h2>What You Get Inside</h2>
+    <div class="feature-grid">
+        <div class="feature">
+            <h3>Script Marketplace</h3>
+            <p>Request, track, and receive professional scripts.</p>
+        </div>
+        <div class="feature">
+            <h3>Creator Tools</h3>
+            <p>Assets and utilities that elevate your workflow.</p>
+        </div>
+        <div class="feature">
+            <h3>System Core</h3>
+            <p>Advanced modules and AI tooling.</p>
+        </div>
+        <div class="feature">
+            <h3>Community</h3>
+            <p>Connect with creators who match your ambition.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonials">
+    <div class="testimonial-box">
+        “ScriptWorks HQ feels like a real workspace — structured, clean, and powerful.”
+    </div>
+</section>
+
+</div>
+
+<!-- STARFIELD SCRIPT -->
+<script>
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+
+function resize() {
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+}
+resize();
+addEventListener("resize", resize);
+
+let stars = Array.from({ length: 180 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    speed: Math.random() * 1.8 + 0.5
+}));
+
+function animate() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle = "white";
+
+    stars.forEach(s => {
+        s.y += s.speed;
+        if (s.y > canvas.height) s.y = 0;
+        ctx.fillRect(s.x, s.y, 2, 2);
+    });
+
+    requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>
